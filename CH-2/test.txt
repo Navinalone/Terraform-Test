@@ -1,0 +1,9 @@
+1. login to the azure portal and create an vm 
+2. Issue the follwoing get request :
+
+i have reffered below document :
+
+-- https://learn.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service?tabs=windows
+
+1- have created Virtual machine 
+ in the advanced tab just enable the user date and we can add some user date like : use of the vm or something 

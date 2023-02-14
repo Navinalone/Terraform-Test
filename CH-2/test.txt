@@ -12,6 +12,6 @@ i have reffered below document :
 
 3 - Open the powershell anfd Run the below command 
  
-Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri "http://169.254.169.254/metadata/instance?api-version=2021-02-01" | ConvertTo-Json -Depth 64 | Out-File -FilePath C:\result.json
+Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri "http://169.254.169.254/metadata/instance?api-version=2021-02-01" | ConvertTo-Json | Out-File -FilePath C:\result.json
 
 Then we will get the output in the form of result.json

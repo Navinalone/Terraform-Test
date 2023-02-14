@@ -6,7 +6,7 @@ We have a nested object, we would like a function that you pass in the object an
 
 object = {“x”:{“y”:{“z”:”a”}}} key = x/y/z value = a
 
-in this code i have worked on given example and i have written the code in js format
+in this code i have worked on different example and i have written the code in js format
 
 
 Approach

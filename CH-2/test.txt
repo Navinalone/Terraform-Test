@@ -7,3 +7,11 @@ i have reffered below document :
 
 1- have created Virtual machine 
  in the advanced tab just enable the user date and we can add some user date like : use of the vm or something 
+ 
+2 - after creation of vm completed , login in to the VM
+
+3 - Open the powershell anfd Run the below command 
+ 
+Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri "http://169.254.169.254/metadata/instance?api-version=2021-02-01" | ConvertTo-Json -Depth 64 | Out-File -FilePath C:\result.json
+
+Then we will get the output in the form of result.json

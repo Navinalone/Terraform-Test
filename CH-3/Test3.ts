@@ -1,18 +1,35 @@
-var object = { 'a': 
-                    { 'b': 
-                        { 'c': 'Test-3 verified' }
-                    }
-            }
-            
-var val = getValuefromObjectsUsingKeys(object, "a/b/c");
+const obj = {
+    "prop": [
+       {
+          "key": "FOOD",
+          "value": "Food is wonderfull, food is great"
+       },
+       {
+          "key": "BAR",
+          "value": "Bar is bad, really bad"
+       },
+       {
+        "key": "BAR",
+        "value": "Bar is good, really good"
+       }
+    ]
+ };
+ const findByKey = (obj: any, key: any) => {
+    const arr = obj['prop'];
+    if(arr.length){
+       const result = arr.filter((el: any) => {
+         return el['key'] === key;
+       });
 
-function getValuefromObjectsUsingKeys(object1: any, key: any) {
-    let keys = key.split('/');
-        keys.forEach((x:any) => {
-            object1 = object1[x];
-        });
-        return object1;
-}
+      // console.log(result);
 
-let value = val?val:null
-console.log(value);
+       if(result.length){
+          return result[0].value;
+       }
+       else{
+          return 'no value found';
+       }
+    }
+ }
+ console.log(findByKey(obj, 'FOOD'));
+ 
